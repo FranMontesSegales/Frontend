@@ -6,35 +6,29 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class BossService {
-  url = 'http://localhost:3000/boss';
+  url = 'http://localhost:3000';
   constructor(private http: HttpClient) {}
 
   //get Boss
-  public getBoss(datos: any) {
-    return this.http.get(
-      `${this.url}?name=${datos.name}&description=${datos.description}`
-    );
+  public getBoss(name: string, description: string) {
+      return this.http.get<Boss[]>(`${this.url}/boss?name=${name}&description=${description}`);
+
   }
 
   //get Personajes
-  public getCharacter(datos: any) {
-    return this.http.get(
-      `${this.url}?name=${datos.name}&description=${datos.description}`
-    );
+  public getCharacter(name: string, description: string) {
+    return this.http.get<Character[]>(`${this.url}/character?name=${name}&description=${description}`);
+
   }
 
   //get Personajes
-  public getItem(datos: any) {
-    return this.http.get(
-      `${this.url}?name=${datos.name}&description=${datos.description}`
-    );
+  public getItem(name: string, description: string) {
+      return this.http.get<Item[]>(`${this.url}/item?name=${name}&description=${description}`);
   }
 
   //get Personajes
-  public getZone(datos: any) {
-    return this.http.get(
-      `${this.url}?name=${datos.name}&description=${datos.description}`
-    );
+  public getZone(name: string, description: string) {
+    return this.http.get<Zone[]>(`${this.url}/zone?name=${name}&description=${description}`);
   }
 }
 

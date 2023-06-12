@@ -1,13 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { BossService, Boss, Character } from 'src/app/user.service';
+import { BossService, Boss, Character, Item, Zone } from 'src/app/user.service';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
-  template: `
-    <img [src]="imageSrc" alt="Image">
-  `,
 })
 export class LoginComponent implements OnInit {
   name: string = '';
@@ -19,21 +16,23 @@ export class LoginComponent implements OnInit {
 
   bossData: Boss[] = [];
   characterData: Character[] = [];
+  itemData: Item[] = [];
+  zoneData: Zone[] = [];
 
   constructor(private bossService: BossService) {}
 
   ngOnInit() {
     this.getBossData();
     this.getCharacterData();
+    this.getItemData();
+    this.getZoneData();
+
   }
 
 
   getBossData() {
-    const datosBoss = {
-      name: this.name,
-      description: this.description,
-    };
-    this.bossService.getBoss(datosBoss).subscribe(
+
+    this.bossService.getBoss('BossName', 'BossDescription').subscribe(
       (response) => {
         console.log('Solicitud GET exitosa', response);
         this.bossData = response as Boss[]; // Forzar el tipo a Boss[]
@@ -46,14 +45,37 @@ export class LoginComponent implements OnInit {
   }
 
   getCharacterData() {
-    const datosCharacter = {
-      name: this.name,
-      description: this.description,
-    };
-    this.bossService.getCharacter(datosCharacter).subscribe(
+
+    this.bossService.getCharacter('CharacterName', 'CharacterDescription').subscribe(
       (response) => {
         console.log('Solicitud GET exitosa', response);
         this.characterData = response as Character[]; // Forzar el tipo a Character[]
+      },
+      (error) => {
+        console.error('Error al realizar la solicitud GET', error);
+        // Realiza las acciones necesarias en caso de error
+      }
+    );
+  }
+
+  getItemData() {
+    this.bossService.getItem('ItemName', 'ItemDescription').subscribe(
+      (response) => {
+        console.log('Solicitud GET exitosa', response);
+        this.itemData = response as Item[]; // Forzar el tipo a Character[]
+      },
+      (error) => {
+        console.error('Error al realizar la solicitud GET', error);
+        // Realiza las acciones necesarias en caso de error
+      }
+    );
+  }
+
+  getZoneData() {
+    this.bossService.getZone('ZoneName', 'ZoneDescription').subscribe(
+      (response) => {
+        console.log('Solicitud GET exitosa', response);
+        this.zoneData = response as Zone[]; // Forzar el tipo a Character[]
       },
       (error) => {
         console.error('Error al realizar la solicitud GET', error);

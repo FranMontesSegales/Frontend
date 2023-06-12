@@ -64,34 +64,36 @@
       <div class="w3-container">
         <h1><b>FANWIKI</b></h1>
         <div class="w3-section w3-bottombar w3-padding-16">
-          <span class="w3-margin-right">Filter:</span>
           <button class="w3-button w3-black">Bosses</button>
-          <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Design</button>
-          <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Photos</button>
-          <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Art</button>
+          <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Character</button>
+          <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Item</button>
+          <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Zone</button>
         </div>
       </div>
     </header>
 
-<!-- First Photo Grid-->
-<div class="w3-row-padding">
-  <div class="w3-third w3-container w3-margin-bottom">
-    <div class="w3-container w3-white">
-      &nbsp; &nbsp;<img src="https://images.pushsquare.com/bd07c4a18b137/sekiro-shadows-die-twice-how-to-kill-genichiro-ashina-guide-ps4-playstation-4.large.jpg" height="200" width="350" alt>
-      <div *ngFor="let boss of bossData | slice:0:1">
-        <p><b>Nombre:</b> {{ boss.name }}</p>
-        <p><b>Descripción:</b> {{ boss.description }}</p>
-        <p><b>Barras de Vida:</b> {{ boss.deathblow }}</p>
-        <p><b>Devilidad:</b> {{ boss.usefulTools }}</p>
-        <p><b>localización:</b> {{ boss.localization }}</p>
-        <p><b>item:</b> {{ boss.item}}</p>
+    <!-- Boss 1 Photo Grid-->
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img
+            src="https://images.pushsquare.com/bd07c4a18b137/sekiro-shadows-die-twice-how-to-kill-genichiro-ashina-guide-ps4-playstation-4.large.jpg"
+            height="200" width="350" alt>
+          <div *ngFor="let boss of bossData | slice:0:1">
+            <p><b>Nombre:</b> {{ boss.name }}</p>
+            <p><b>Descripción:</b> {{ boss.description }}</p>
+            <p><b>Barras de Vida:</b> {{ boss.deathblow }}</p>
+            <p><b>Devilidad:</b> {{ boss.usefulTools }}</p>
+            <p><b>localización:</b> {{ boss.localization }}</p>
+            <p><b>item:</b> {{ boss.item}}</p>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
       <div class="w3-third w3-container w3-margin-bottom">
         <!-- <img src="/w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
         <div class="w3-container w3-white">
-          &nbsp; &nbsp;<img src="https://www.egamers.com/wp-content/uploads/2019/04/sekiro-serpiente-1024x500.jpg" height="200" width="350">
+          &nbsp; &nbsp;<img src="https://www.egamers.com/wp-content/uploads/2019/04/sekiro-serpiente-1024x500.jpg"
+            height="200" width="350">
           <div *ngFor="let boss of bossData | slice:1:2">
             <p><b>Nombre:</b> {{ boss.name }}</p>
             <p><b>Descripción:</b> {{ boss.description }}</p>
@@ -105,7 +107,9 @@
       <div class="w3-third w3-container">
         <!-- <img src="/w3images/nature.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
         <div class="w3-container w3-white">
-          &nbsp; &nbsp;<img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2019/04/monja-corrupta-verdadera-sekiro-shadows-die-twice_3.jpg" height="200" width="350">
+          &nbsp; &nbsp;<img
+            src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2019/04/monja-corrupta-verdadera-sekiro-shadows-die-twice_3.jpg"
+            height="200" width="350">
           <div *ngFor="let boss of bossData | slice:2:3">
             <p><b>Nombre:</b> {{ boss.name }}</p>
             <p><b>Descripción:</b> {{ boss.description }}</p>
@@ -119,7 +123,7 @@
       </div>
     </div>
 
-    <!-- Second Photo Grid-->
+    <!-- Boss 2 Photo Grid-->
     <div class="w3-row-padding">
       <div class="w3-third w3-container w3-margin-bottom">
         <!-- <img src="/w3images/p1.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
@@ -147,6 +151,7 @@
             <p><b>Devilidad:</b> {{ boss.usefulTools }}</p>
             <p><b>localización:</b> {{ boss.localization }}</p>
             <p><b>item:</b> {{ boss.item}}</p>
+            <br>
           </div>
         </div>
       </div>
@@ -164,11 +169,15 @@
           </div>
         </div>
       </div>
+    </div>
 
+
+    <!-- Boss 3 Photo Grid-->
+    <div class="w3-row-padding">
       <div class="w3-third w3-container">
         <!-- <img src="/w3images/p3.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
         <div class="w3-container w3-white">
-          &nbsp; &nbsp;<img src="https://images.pushsquare.com/bd07c4a18b137/sekiro-shadows-die-twice-how-to-kill-genichiro-ashina-guide-ps4-playstation-4.large.jpg" height="200">
+          &nbsp; &nbsp;<img src="https://media.vandal.net/master/3-2019/201932523541599_1.jpg" height="200">
           <div *ngFor="let boss of bossData | slice:6:7">
             <p><b>Nombre:</b> {{ boss.name }}</p>
             <p><b>Descripción:</b> {{ boss.description }}</p>
@@ -180,44 +189,413 @@
         </div>
       </div>
     </div>
+<br>
+<div class="w3-black w3-center w3-padding-24">NoHesitation Boss</div>
+
+    <header id="portfolio">
+      <!-- <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;"
+          class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a> -->
+      <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
+          class="fa fa-bars"></i></span>
+      <div class="w3-container">
+
+        <div class="w3-section w3-bottombar w3-padding-16">
+          <button class="w3-button w3-black">Character</button>
+          <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Bosses</button>
+          <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Item</button>
+          <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Zone</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Character 1 Photo Grid-->
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img
+            src="https://pbs.twimg.com/media/EsM8fw-WMAUtOKC.jpg:large"
+            height="200" width="350" alt>
+          <div *ngFor="let character of characterData | slice:0:1">
+            <p><b>Nombre:</b> {{ character.name }}</p>
+            <p><b>Descripción:</b> {{ character.description }}</p>
+            <p><b>localización:</b> {{ character.localization }}</p>
+            <p><b>item:</b> {{ character.item}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <!-- <img src="/w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img src="https://pbs.twimg.com/media/ENh8xBrUUAAo9pJ?format=jpg&name=large"
+            height="200" width="350">
+          <div *ngFor="let character of characterData | slice:1:2">
+            <p><b>Nombre:</b> {{ character.name }}</p>
+            <p><b>Descripción:</b> {{ character.description }}</p>
+            <p><b>localización:</b> {{ character.localization }}</p>
+            <p><b>item:</b> {{ character.item}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <!-- <img src="/w3images/nature.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img
+            src="https://i.ytimg.com/vi/C6I7e3HqmMo/maxresdefault.jpg"
+            height="200" width="350">
+          <div *ngFor="let character of characterData | slice:2:3">
+            <p><b>Nombre:</b> {{ character.name }}</p>
+            <p><b>Descripción:</b> {{ character.description }}</p>
+            <p><b>localización:</b> {{ character.localization }}</p>
+            <p><b>item:</b> {{ character.item}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Character 2 Photo Grid-->
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img
+            src="https://media.vandal.net/master/3-2019/20193301348371_1.jpg"
+            height="200" width="350" alt>
+          <div *ngFor="let character of characterData | slice:3:4">
+            <p><b>Nombre:</b> {{ character.name }}</p>
+            <p><b>Descripción:</b> {{ character.description }}</p>
+            <p><b>localización:</b> {{ character.localization }}</p>
+            <p><b>item:</b> {{ character.item}}</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <!-- <img src="/w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img src="https://images.pushsquare.com/bd07c4a18b137/sekiro-shadows-die-twice-how-to-kill-genichiro-ashina-guide-ps4-playstation-4.large.jpg"
+            height="200" width="350">
+          <div *ngFor="let character of characterData | slice:4:5">
+            <p><b>Nombre:</b> {{ character.name }}</p>
+            <p><b>Descripción:</b> {{ character.description }}</p>
+            <p><b>localización:</b> {{ character.localization }}</p>
+            <p><b>item:</b> {{ character.item}}</p>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <!-- <img src="/w3images/nature.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img
+            src="https://media.vandal.net/master/3-2019/201932523541599_1.jpg"
+            height="200" width="350">
+          <div *ngFor="let character of characterData | slice:5:6">
+            <p><b>Nombre:</b> {{ character.name }}</p>
+            <p><b>Descripción:</b> {{ character.description }}</p>
+            <p><b>localización:</b> {{ character.localization }}</p>
+            <p><b>item:</b> {{ character.item}}</p>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Character 3 Photo Grid-->
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img
+            src="https://media.vandal.net/master/3-2019/20193271205138_1.jpg"
+            height="200" width="350" alt>
+          <div *ngFor="let character of characterData | slice:6:7">
+            <p><b>Nombre:</b> {{ character.name }}</p>
+            <p><b>Descripción:</b> {{ character.description }}</p>
+            <p><b>localización:</b> {{ character.localization }}</p>
+            <p><b>item:</b> {{ character.item}}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <br>
+    <div class="w3-black w3-center w3-padding-24">NoHesitation Character</div>
+
+    <header id="portfolio">
+      <!-- <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;"
+          class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a> -->
+      <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
+          class="fa fa-bars"></i></span>
+      <div class="w3-container">
+
+        <div class="w3-section w3-bottombar w3-padding-16">
+          <button class="w3-button w3-black">Item</button>
+          <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Bosses</button>
+          <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Character</button>
+          <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right"></i>Zone</button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Item 1 Photo Grid-->
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img
+            src="https://i.blogs.es/1730b0/screenshot_1/1366_2000.png"
+            height="200" width="350" alt>
+          <div *ngFor="let item of itemData | slice:0:1">
+            <p><b>Nombre:</b> {{ item.name }}</p>
+            <p><b>Descripción:</b> {{ item.description }}</p>
+            <p><b>localización:</b> {{ item.localization }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <!-- <img src="/w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img src="https://media.vandal.net/i/640x360/3-2019/20193291693945_1.jpg"
+            height="200" width="350">
+          <div *ngFor="let item of itemData | slice:1:2">
+            <p><b>Nombre:</b> {{ item.name }}</p>
+            <p><b>Descripción:</b> {{ item.description }}</p>
+            <p><b>localización:</b> {{ item.localization }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <!-- <img src="/w3images/nature.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img
+            src="https://media.vandal.net/master/3-2019/2019322119639_1.jpg"
+            height="200" width="350">
+          <div *ngFor="let item of itemData | slice:2:3">
+            <p><b>Nombre:</b> {{ item.name }}</p>
+            <p><b>Descripción:</b> {{ item.description }}</p>
+            <p><b>localización:</b> {{ item.localization }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Item 2 Photo Grid-->
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img
+            src="https://i.pinimg.com/originals/9d/94/d8/9d94d858dbd02bf8b1e45124cd635bf5.jpg"
+            height="200" width="350" alt>
+          <div *ngFor="let item of itemData | slice:3:4">
+            <p><b>Nombre:</b> {{ item.name }}</p>
+            <p><b>Descripción:</b> {{ item.description }}</p>
+            <p><b>localización:</b> {{ item.localization }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <!-- <img src="/w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img src="https://areajugones.sport.es/wp-content/uploads/2019/03/Sekiro-Escama.jpg"
+            height="200" width="350">
+          <div *ngFor="let item of itemData | slice:4:5">
+            <p><b>Nombre:</b> {{ item.name }}</p>
+            <p><b>Descripción:</b> {{ item.description }}</p>
+            <p><b>localización:</b> {{ item.localization }}</p>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <!-- <img src="/w3images/nature.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img
+            src="https://media.vandal.net/i/620x351/3-2019/20193221212296_3.jpg"
+            height="200" width="350">
+          <div *ngFor="let item of itemData | slice:5:6">
+            <p><b>Nombre:</b> {{ item.name }}</p>
+            <p><b>Descripción:</b> {{ item.description }}</p>
+            <p><b>localización:</b> {{ item.localization }}</p>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Item 3 Photo Grid-->
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img
+            src="https://cloudfront-eu-central-1.images.arcpublishing.com/diarioas/Y43545JP6VISZEVBVJLLF4O34U.jpg"
+            height="200" width="350" alt>
+          <div *ngFor="let item of itemData | slice:6:7">
+            <p><b>Nombre:</b> {{ item.name }}</p>
+            <p><b>Descripción:</b> {{ item.description }}</p>
+            <p><b>localización:</b> {{ item.localization }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img src="https://i.ytimg.com/vi/vOHZFMyyxBc/maxresdefault.jpg"
+            height="200" width="350">
+          <div *ngFor="let item of itemData | slice:7:8">
+            <p><b>Nombre:</b> {{ item.name }}</p>
+            <p><b>Descripción:</b> {{ item.description }}</p>
+            <p><b>localización:</b> {{ item.localization }}</p>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-black w3-center w3-padding-24">NoHesitation Item</div>
+
+    <header id="portfolio">
+      <!-- <a href="#"><img src="/w3images/avatar_g2.jpg" style="width:65px;"
+          class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a> -->
+      <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
+          class="fa fa-bars"></i></span>
+      <div class="w3-container">
+
+        <div class="w3-section w3-bottombar w3-padding-16">
+          <button class="w3-button w3-black">Zone</button>
+          <button class="w3-button w3-white"><i class="fa fa-diamond w3-margin-right"></i>Bosses</button>
+          <button class="w3-button w3-white w3-hide-small"><i class="fa fa-photo w3-margin-right"></i>Character</button>
+          <button class="w3-button w3-white w3-hide-small"><i class="fa fa-map-pin w3-margin-right">Item</i></button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Zone 1 Photo Grid-->
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img
+            src="https://cloudfront-eu-central-1.images.arcpublishing.com/diarioas/ZQQVSDHWWVLXDDUFJZE5UOEVMI.jpg"
+            height="200" width="350" alt>
+          <div *ngFor="let zone of zoneData | slice:0:1">
+            <p><b>Nombre:</b> {{ zone.name }}</p>
+            <p><b>Descripción:</b> {{ zone.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <!-- <img src="/w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2019/04/sekiro-shadows-die-twice.jpg?tf=3840x"
+            height="200" width="350">
+          <div *ngFor="let zone of zoneData | slice:1:2">
+            <p><b>Nombre:</b> {{ zone.name }}</p>
+            <p><b>Descripción:</b> {{ zone.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <!-- <img src="/w3images/nature.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img
+            src="https://media.vandal.net/i/640x360/3-2019/201932111301031_1.jpg"
+            height="200" width="350">
+          <div *ngFor="let zone of zoneData | slice:2:3">
+            <p><b>Nombre:</b> {{ zone.name }}</p>
+            <p><b>Descripción:</b> {{ zone.description }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Zone 2 Photo Grid-->
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img
+            src="https://media.vandal.net/master/3-2019/20193212127889_1.jpg"
+            height="200" width="350" alt>
+          <div *ngFor="let zone of zoneData | slice:3:4">
+            <p><b>Nombre:</b> {{ zone.name }}</p>
+            <p><b>Descripción:</b> {{ zone.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <!-- <img src="/w3images/lights.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img src="https://media.vandal.net/master/3-2019/20193221152784_1.jpg"
+            height="200" width="350">
+          <div *ngFor="let zone of zoneData | slice:4:5">
+            <p><b>Nombre:</b> {{ zone.name }}</p>
+            <p><b>Descripción:</b> {{ zone.description }}</p>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="w3-third w3-container">
+        <!-- <img src="/w3images/nature.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity"> -->
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img
+            src="https://media.vandal.net/i/1280x720/3-2019/20193221452815_1.jpg"
+            height="200" width="350">
+          <div *ngFor="let zone of zoneData | slice:5:6">
+            <p><b>Nombre:</b> {{ zone.name }}</p>
+            <p><b>Descripción:</b> {{ zone.description }}</p>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Zone 3 Photo Grid-->
+    <div class="w3-row-padding">
+      <div class="w3-third w3-container w3-margin-bottom">
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img
+            src="https://media.vandal.net/i/620x351/3-2019/201932317553220_1.jpg"
+            height="200" width="350" alt>
+          <div *ngFor="let zone of zoneData | slice:6:7">
+            <p><b>Nombre:</b> {{ zone.name }}</p>
+            <p><b>Descripción:</b> {{ zone.description }}</p>
+          </div>
+        </div>
+      </div>
+      <div class="w3-third w3-container w3-margin-bottom">
+        <div class="w3-container w3-white">
+          &nbsp; &nbsp;<img src="https://media.vandal.net/master/3-2019/20193282013840_1.jpg"
+            height="200" width="350">
+          <div *ngFor="let zone of zoneData | slice:7:8">
+            <p><b>Nombre:</b> {{ zone.name }}</p>
+            <p><b>Descripción:</b> {{ zone.description }}</p>
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="w3-black w3-center w3-padding-24">NoHesitation Zone</div>
 
 
 
-    <div class="w3-black w3-center w3-padding-24">Powered by <a href="https://www.w3schools.com/w3css/default.asp"
-        title="W3.CSS" target="_blank" class="w3-hover-opacity">w3.css</a></div>
+
+
+
+
+
+
+
   </div>
-  <!-- <script>
-    document.addEventListener('DOMContentLoaded', getBossDetails);
 
-    function getBossDetails() {
-      console.log('Obteniendo detalles del jefe...');
-      fetch('http://localhost:3000/boss')
-        .then(response => response.json())
-        .then(data => {
-          console.log('Datos recibidos:', data);
-          displayBossDetails(data);
-        })
-        .catch(error => {
-          console.log('Error:', error);
-        });
 
-    }
 
-    function displayBossDetails(boss) {
-      console.log('Mostrando detalles del jefe:', boss)
-      const bossDetailsElement = document.getElementById('boss-details');
 
-      const bossName = document.createElement('h2');
-      bossName.textContent = boss.name;
-      bossDetailsElement.appendChild(bossName);
-
-      const bossDescription = document.createElement('p');
-      bossDescription.textContent = boss.description;
-      bossDetailsElement.appendChild(bossDescription);
-
-    }
-
-  </script> -->
 
 
   <script>
